@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap");
+
+/* arrow class  */
+.arrow {
+  border: solid rgb(248, 247, 247);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* arrow class  */
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  height: 80px;
+  /* background-color: rgb(40, 6, 83); */
+  background-color: rgb(46, 11, 92);
+  color: white;
+
+  font-family: "Mulish", sans-serif;
+  position: relative;
+}
+.top__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: #fff;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.brand__name {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 80px;
+  margin-right: 640px;
+  font-size: 13px;
+}
+.menu__itemlist {
+  right: 150px;
+}
+.menu__item {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  padding-bottom: 21px;
+  font-size: 13px;
+}
+.header__profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 85px;
+}
+.user__profile {
+  width: 35px;
+  height: auto;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.user__name {
+  margin-right: 10px;
+  font-family: "Mulish", sans-serif;
+  cursor: pointer;
+  font-size: 13px;
+}
+.user__dropdown {
+  cursor: pointer;
+}
+.line__div {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: 70px;
+  color: rgb(245, 234, 234);
+  border-bottom: 1px solid rgb(56 42 74);
+  box-shadow: 1px 1px -1px #26113a;
+}
+.menuitem__active {
+  border-bottom: 3px solid rgb(10, 250, 10);
+}
