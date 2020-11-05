@@ -1,20 +1,32 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, BrowserRouter } from "react-router-dom";
 import "./User.css";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import SearchIcon from "@material-ui/icons/Search";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
-import sdata from "./sdata";
+import Employee__list from "./Employee__list";
+import Employee__list__all from "./Employee__list__all";
+import Pendingtips from "./Pendingtips";
+import Fullallowances from "./Fullallowances";
 
-import Employ from "./Employ";
 function User() {
   const [alpha, setalpha] = useState("A"); // for changing the alphabet writern on heading
   const [previousElem, setfirstval] = useState(0); //for changing the cut shape design below alphabet
+
+  // changing sub menu and employee list section
+  const [menudefault, setmenu] = useState(() => {
+    return <Employee__list prop1={alpha} />;
+  });
   const changealpha = (val) => {
     // ***************************************// for changing the alphabet writern on heading
     let linkval = val.target.name;
     console.log(val);
     setalpha(linkval);
+
+    // when again click on alphabet
+    setmenu(() => {
+      return <Employee__list prop1={linkval} />;
+    });
     // ***************************************// for changing the alphabet writern on heading
 
     //for changing the class and creating cut symol below alphabet***********************
@@ -28,6 +40,24 @@ function User() {
 
     val.target.className = "alphabet__child down__header__line__itemactive";
     //for changing the class and creating cut symol below alphabet***********************
+  };
+
+  // changing child menu
+
+  const changeminimenu = (e) => {
+    if (e.target.name == "all") {
+      setmenu(() => {
+        return <Employee__list__all />;
+      });
+    } else if (e.target.name == "pending") {
+      setmenu(() => {
+        return <Pendingtips />;
+      });
+    } else if (e.target.name == "fullallow") {
+      setmenu(() => {
+        return <Fullallowances />;
+      });
+    }
   };
 
   return (
@@ -270,15 +300,30 @@ function User() {
             <SearchIcon className="search__section__icon" />
           </div>
           <div className="option__section">
-            <NavLink to="" className="option__section__item">
+            <Link
+              className="option__section__item"
+              activeClassName="minimenu__active"
+              name="all"
+              onClick={changeminimenu}
+            >
               All
-            </NavLink>
-            <NavLink to="" className="option__section__item">
+            </Link>
+            <Link
+              className="option__section__item"
+              activeClassName="minimenu__active"
+              name="pending"
+              onClick={changeminimenu}
+            >
               Pending Tips
-            </NavLink>
-            <NavLink to="" className="option__section__item">
+            </Link>
+            <Link
+              className="option__section__item"
+              activeClassName="minimenu__active"
+              name="fullallow"
+              onClick={changeminimenu}
+            >
               Full Allowance
-            </NavLink>
+            </Link>
           </div>
         </div>
         <div className="line__2"></div>
@@ -320,26 +365,9 @@ function User() {
           <div className="analysis">September Analysis</div>
         </div>
 
-        <div className="employ__list__section">
-          <div className="employ__list__section__heading">{alpha}</div>
-          <div className="employ__list__section__body">
-            {sdata.map((val, ind) => {
-              if (
-                val.sdfname.charAt(0) == alpha.charAt(0) ||
-                val.sdfname.charAt(0).toUpperCase() == alpha.charAt(0)
-              ) {
-                return (
-                  <Employ
-                    fname={val.sdfname}
-                    lname={val.sdlname}
-                    amt={val.sdamt}
-                    acamt={val.sdamtoutof}
-                  />
-                );
-              }
-            })}
-          </div>
-        </div>
+        {/* employ list section dynalically changed all pending fullalowences */}
+        {menudefault}
+        {/* <Employee__list prop1={alpha} /> */}
       </div>
     </>
   );

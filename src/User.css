@@ -163,6 +163,10 @@
   color: #000;
   font-family: "Heebo", sans-serif;
   font-size: 13px;
+  margin-bottom: -20px;
+}
+.minimenu__active {
+  border-bottom: 3px solid rgb(10, 250, 10);
 }
 .line__2 {
   position: absolute;
