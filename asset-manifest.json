@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Empolyee-management-system/static/css/main.6e117724.chunk.css",
-    "main.js": "/Empolyee-management-system/static/js/main.62f559b4.chunk.js",
-    "main.js.map": "/Empolyee-management-system/static/js/main.62f559b4.chunk.js.map",
+    "main.css": "/Empolyee-management-system/static/css/main.24081d5a.chunk.css",
+    "main.js": "/Empolyee-management-system/static/js/main.33865f76.chunk.js",
+    "main.js.map": "/Empolyee-management-system/static/js/main.33865f76.chunk.js.map",
     "runtime-main.js": "/Empolyee-management-system/static/js/runtime-main.6fea61aa.js",
     "runtime-main.js.map": "/Empolyee-management-system/static/js/runtime-main.6fea61aa.js.map",
-    "static/js/2.a5796492.chunk.js": "/Empolyee-management-system/static/js/2.a5796492.chunk.js",
-    "static/js/2.a5796492.chunk.js.map": "/Empolyee-management-system/static/js/2.a5796492.chunk.js.map",
+    "static/js/2.649d9be0.chunk.js": "/Empolyee-management-system/static/js/2.649d9be0.chunk.js",
+    "static/js/2.649d9be0.chunk.js.map": "/Empolyee-management-system/static/js/2.649d9be0.chunk.js.map",
     "index.html": "/Empolyee-management-system/index.html",
-    "static/css/main.6e117724.chunk.css.map": "/Empolyee-management-system/static/css/main.6e117724.chunk.css.map",
-    "static/js/2.a5796492.chunk.js.LICENSE.txt": "/Empolyee-management-system/static/js/2.a5796492.chunk.js.LICENSE.txt",
+    "static/css/main.24081d5a.chunk.css.map": "/Empolyee-management-system/static/css/main.24081d5a.chunk.css.map",
+    "static/js/2.649d9be0.chunk.js.LICENSE.txt": "/Empolyee-management-system/static/js/2.649d9be0.chunk.js.LICENSE.txt",
     "static/media/profile.ad6c5943.jpg": "/Empolyee-management-system/static/media/profile.ad6c5943.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.6fea61aa.js",
-    "static/js/2.a5796492.chunk.js",
-    "static/css/main.6e117724.chunk.css",
-    "static/js/main.62f559b4.chunk.js"
+    "static/js/2.649d9be0.chunk.js",
+    "static/css/main.24081d5a.chunk.css",
+    "static/js/main.33865f76.chunk.js"
   ]
 }
